@@ -1,0 +1,2 @@
+canonical_id,name,artifact_type,domain,owner,version,status,path,source_reference,criticality,last_reviewed
+BOOTSTRAP-AUTHORIZATION-001,JAIF Canonical Foundation Bootstrap V0.1,AUTHORIZATION_EVIDENCE_RECORD,RECOVERY_REQUIRED,RECOVERY_REQUIRED,RECOVERY_REQUIRED,DISCOVERED,evidence/BOOTSTRAP-AUTHORIZATION-001.md,NOT_VERIFIED,RECOVERY_REQUIRED,NOT_VERIFIED

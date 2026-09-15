@@ -1,0 +1,41 @@
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Node e saídas locais
+node_modules/
+dist/
+build/
+coverage/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ambiente e segredos locais (não substitui inspeção)
+.env
+.env.*
+secrets.local/
+.secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Temporários
+*.tmp
+*.temp
+*.log
+~$*
+.cache/
