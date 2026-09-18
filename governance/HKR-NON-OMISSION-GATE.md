@@ -24,6 +24,46 @@ DELTA → DECISION → TARGET → IMPLEMENTATION → VERIFICATION → CLOSURE**.
 | VERIFICATION | Critérios, método, evidência, resultado, executor e limitações. |
 | CLOSURE | Reconciliação dos elos e disposição verificável das pendências. |
 
+### Persistência e vínculo da cadeia HKR
+
+`HKR-INVENTORY.csv` é um índice controlado de fontes históricas, contexto de
+recuperação e estado de tratamento da fonte.
+
+Uma linha em `HKR-INVENTORY.csv` NÃO constitui, isoladamente, evidência de que
+a cadeia HKR foi completada.
+
+Em particular, uma linha de inventário NÃO prova por si só:
+
+- que todos os claims materiais da fonte foram extraídos;
+- que evidência suficiente foi avaliada;
+- que a proveniência foi considerada adequada para o claim;
+- que a interpretação foi reconciliada;
+- que materialidade e owner foram confirmados;
+- que um delta foi aprovado;
+- que uma decisão competente ocorreu;
+- que o target foi alterado;
+- que a implementação ocorreu;
+- que a implementação foi verificada;
+- que o conhecimento foi encerrado sem dívida residual.
+
+A cadeia obrigatória
+
+SOURCE → CLAIM → EVIDENCE → PROVENANCE → INTERPRETATION → MATERIALITY →
+OWNER → DELTA → DECISION → TARGET → IMPLEMENTATION → VERIFICATION → CLOSURE
+
+DEVE permanecer reconstruível por referências controladas entre a fonte
+inventariada e os registros ou artefatos aplicáveis.
+
+Um elo pode ser marcado como não aplicável somente quando sua inaplicabilidade
+for explicitamente justificada no contexto do claim e revisada conforme a
+governança aplicável.
+
+Nenhum campo `*_status` do inventário pode substituir o registro material do
+evento, decisão, execução ou verificação a que se refere.
+
+Esta regra NÃO cria novo domínio, registry, owner, engine ou fonte de verdade.
+Também NÃO exige adicionar novas colunas ao `HKR-INVENTORY.csv`.
+
 ## Execução do gate
 
 Inventariar fontes em `registry/HKR-INVENTORY.csv`, mantendo vínculos para registros
