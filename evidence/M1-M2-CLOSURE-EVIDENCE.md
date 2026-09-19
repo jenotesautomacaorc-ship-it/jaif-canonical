@@ -148,7 +148,8 @@ formalização. A criação deste arquivo no working tree não declara M1/M2 fin
 fechados. Merge também não equivale automaticamente a aceitação: decisão competente,
 versão, escopo e evidência continuam sujeitos à governança aplicável.
 
-O fechamento documental/Git delimitado somente poderá ser declarado após:
+Na criação deste registro (Phase 7B), o fechamento documental/Git delimitado
+somente poderia ser declarado após:
 
 1. Revisão deste registro e da materialização SCT.
 2. Criação de um commit controlado separado.
@@ -157,14 +158,81 @@ O fechamento documental/Git delimitado somente poderá ser declarado após:
 5. Autorização separada do merge.
 6. Verificação pós-merge de que o delta autorizado de closure chegou à main inalterado.
 
-Essas condições futuras não autorizam tais ações na Phase 7B nem dispensam
+Essas condições, então futuras, não autorizavam tais ações na Phase 7B nem dispensam
 autoridade/evidência exigidas para a decisão. Lacunas materiais necessárias ao
 fechamento dependente não podem ser superadas por inferência.
 
-M1/M2 documentary/Git closure is NOT YET FINALIZED by this record.
+Estado histórico na criação deste registro (Phase 7B), preservado:
+"M1/M2 documentary/Git closure is NOT YET FINALIZED by this record."
 
 CLOSED não é criado como estado canônico. Este registro não promove conteúdo
 para ACCEPTED ou CURRENT automaticamente.
+
+### Post-merge bounded acceptance and closure
+
+O registro originalmente não finalizava closure por si próprio. Posteriormente,
+o ciclo controlado deste pacote documental/Git foi concluído, conforme os fatos
+fornecidos na autorização humana da Phase 8A e a evidência Git local abaixo.
+
+| Item | Resultado / evidência |
+| --- | --- |
+| Precommit review | PASS, conforme histórico informado na Phase 8A |
+| Atomic closure commit | ec0fd28b5935d28cb4167bc8c2372cd5f4671a22 |
+| Commit parent | edf9098570dac9141fb8aa78936667f5612935dc |
+| Commit tree | cd72d24a18d939883cbd51c8d6684d1a9dbd1504 |
+| Staged/commit patch-ID | 5022bdc9f65c04a528e1aaa45c31750295686427 |
+| Remote branch publication | VERIFIED, conforme histórico informado na Phase 8A |
+| PR | #3 — docs(governance): materialize M1/M2 closure evidence |
+| PR head | ec0fd28b5935d28cb4167bc8c2372cd5f4671a22 |
+| Merge authorization | Separadamente concedida, conforme declaração humana da Phase 8A |
+| Merge commit | 10cc5375ac32c529a8233f569303a0979f380719 |
+| Merge first parent | edf9098570dac9141fb8aa78936667f5612935dc |
+| Merge second parent | ec0fd28b5935d28cb4167bc8c2372cd5f4671a22 |
+| Merged tree | cd72d24a18d939883cbd51c8d6684d1a9dbd1504 |
+| Merged tree == authorized closure commit tree | PASS |
+| Old main → merged main delta | Exactly 2 files changed, 222 insertions, 0 deletions: evidence/M1-M2-CLOSURE-EVIDENCE.md e tests/SCT-PREFLIGHT-001.md |
+| Post-merge remote integrity | PASS, conforme histórico informado na Phase 8A |
+| Local main synchronized with origin/main | 10cc5375ac32c529a8233f569303a0979f380719; igualdade com a referência de tracking local reconfirmada na entrada da Phase 8A |
+| Local working tree after sync | CLEAN, reconfirmado na entrada da Phase 8A, antes desta materialização |
+
+Método e limites: na Phase 8A, commits, parents, árvores, delta e patch-ID do
+commit foram reconfirmados por leitura do Git local. A igualdade histórica entre
+staged e commit é registrada conforme o histórico fornecido; não há staging nesta
+etapa. Publicação remota, revisão de PR, autorização separada de merge e verificação
+remota pós-merge são registradas conforme os fatos fornecidos pelo humano na
+Phase 8A, sem alegar nova inspeção remota independente nesta etapa. O resultado
+NOT_VERIFIED da tentativa anterior de Phase 7E não é reescrito como PASS; o histórico
+posterior informado na Phase 8A é a fonte dos resultados remotos aqui registrados.
+
+Decisão humana explícita de aceitação delimitada, fornecida na Phase 8A:
+
+> Autorizo e aceito o fechamento documental/Git delimitado de M1/M2,
+> integrado à main pelo merge commit
+> 10cc5375ac32c529a8233f569303a0979f380719.
+>
+> Reconheço que esta aceitação não concede CURRENT, não resolve o
+> semantic owner ainda RECOVERY_REQUIRED, não encerra as dívidas
+> históricas residuais e não representa closure completo da Jênotes/JAIF.
+
+Proveniência: conversa de trabalho ChatGPT atual, autorização humana da Phase 8A.
+Durable external conversation/message locator: NOT_VERIFIED.
+Nenhum message ID, URL ou locator externo é inferido ou fabricado.
+
+Após o ciclo controlado concluído, a verificação de integridade pós-merge
+reportada, a sincronização local confirmada e a decisão humana explícita acima,
+o fechamento documental/Git de M1/M2 está finalizado SOMENTE no escopo delimitado
+M1/M2 documental/Git. Trata-se de uma conclusão de processo/evidência, não de um
+novo estado canônico de governança nem de promoção automática de artefatos.
+A aceitação não estabelece autoridade empresarial genérica, semantic ownership
+ou autoridade sobre domínios JAIF não relacionados.
+
+- CURRENT: NOT GRANTED.
+- Semantic owner: NOT FORMALLY BOUND / RECOVERY_REQUIRED.
+- Residual historical debt: UNCHANGED / PRESERVED; seção H permanece aplicável.
+- Full Jênotes/JAIF closure: NOT CLAIMED.
+- PostgreSQL/runtime applicability: NOT APPLICABLE às alterações documentais
+  M1/M2 em si; não se declara implementação física verificada nem aceitação
+  operacional/runtime fora desse escopo.
 
 ## H. RESIDUAL DEBT
 
