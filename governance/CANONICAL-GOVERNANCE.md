@@ -40,6 +40,44 @@ FOUNDATION/BOOTSTRAP indica escopo/maturidade deste pacote, não promoção can�
 RECOVERY_REQUIRED indica lacuna histórica; NOT_VERIFIED indica ausência de verificação.
 Esses marcadores não substituem os estados de governança nem são resultados aprovados.
 
+### Escopo dos estados de governança
+
+Os estados definidos nesta seção classificam o estado de governança de um
+sujeito controlado e identificado no escopo deste repositório.
+
+Governance state != domain operational state != temporal currentness.
+
+A aplicação de qualquer estado DEVE identificar de forma inequívoca o sujeito
+governado. Um estado atribuído a uma fonte histórica não se transfere
+automaticamente ao registro que a referencia, ao claim extraído dela, ao
+artefato candidato ou ao objeto de domínio representado.
+
+`CURRENT`, neste contrato de governança, significa que uma versão ou sujeito
+governado foi `ACCEPTED` e explicitamente autorizado como vigente por autoridade
+competente no escopo declarado.
+
+`CURRENT` NÃO pode ser inferido apenas de:
+
+- maior número de versão;
+- data ou timestamp mais recente;
+- arquivo mais novo;
+- ingestão mais recente;
+- último commit;
+- último valor observado;
+- ausência de sucessor conhecido.
+
+Currentness, vigência ou validade operacional de objetos de domínio continuam
+subordinadas ao contrato temporal e ao owner competente do respectivo domínio.
+
+`DISCOVERED` significa que o sujeito explicitamente identificado para aquela
+classificação foi localizado. O estado não pode ser transferido silenciosamente
+entre a fonte histórica e um registro, claim, evidência ou artefato que apenas
+a referencia.
+
+Esta clarificação NÃO cria novos estados, NÃO altera automaticamente os valores
+permitidos nos campos de status dos registries e NÃO autoriza transições
+implícitas.
+
 ## Autoridade
 
 IA pode recuperar, comparar, propor, preparar e executar verificações autorizadas.
