@@ -25,7 +25,7 @@ já comprovada. Relações não demonstradas permanecem RECOVERY_REQUIRED / NOT_
 | E. Source/provenance | Documento local no baseline: fonte declarada é autorização da Etapa 3; não prova origem histórica AIF/EVAL |
 | F. Semantic owner | RECOVERY_REQUIRED; a chave AIF/EVAL citada em recovery não comprova binding deste objeto |
 | G. Authority | Humano autorizou somente esta preparação; autoridade específica para aceitar/promover sucessor não demonstrada, RECOVERY_REQUIRED |
-| H. Contract/invariant | Conteúdo atual do piloto e P01–P15 em CANONICAL-GOVERNANCE; contrato histórico exato RECOVERY_REQUIRED |
+| H. Contract/invariant | Contrato/invariante específico de sucessão não demonstrado; P01–P15 em CANONICAL-GOVERNANCE são somente princípios de governança aplicáveis, não contrato/invariante histórico nem prova de equivalência com o original; contrato histórico exato permanece RECOVERY_REQUIRED |
 | I. SCT | tests/SCT-PREFLIGHT-001.md: identidade, provenance, implementação, verificação, promoção e M1/M2 aplicáveis à revisão documental; sem teste operacional inventado |
 | J. Artifact locator | eval/JAIF-AI-EVAL-PILOT-001.md; não é locator do original |
 | K. Git status | Arquivo rastreado no baseline, inalterado; Git não concede CURRENT |
@@ -48,7 +48,7 @@ já comprovada. Relações não demonstradas permanecem RECOVERY_REQUIRED / NOT_
 | E. Source/provenance | Documento local no baseline; autorização da Etapa 3 declarada no próprio arquivo |
 | F. Semantic owner | RECOVERY_REQUIRED; campo ownership atual não fornece binding comprovado |
 | G. Authority | Humano autorizou esta preparação; autoridade específica para aceitação/promoção futura RECOVERY_REQUIRED |
-| H. Contract/invariant | Skeleton JAIF-VIC-001 existente e P01–P15; contrato histórico exato RECOVERY_REQUIRED, sem síntese |
+| H. Contract/invariant | contracts/JAIF-VIC-001.md é contrato estrutural bootstrap CONTEMPORÂNEO; P01–P15 são princípios de governança, não contrato específico de sucessão nem invariante histórico; nenhum desses elementos prova o contrato histórico original ou equivalência com ele; contrato histórico exato permanece RECOVERY_REQUIRED |
 | I. SCT | tests/SCT-PREFLIGHT-001.md, controles documentais de identidade, provenance, implementação, verificação, promoção e M1/M2 pertinentes |
 | J. Artifact locator | contracts/JAIF-VIC-001.md; não localiza a fonte histórica |
 | K. Git status | Rastreado no baseline, inalterado; não comprova integração implementada |
@@ -71,7 +71,7 @@ já comprovada. Relações não demonstradas permanecem RECOVERY_REQUIRED / NOT_
 | E. Source/provenance | Documento local no baseline; cadeia autorizada na Etapa 3, conforme o próprio arquivo |
 | F. Semantic owner | RECOVERY_REQUIRED; owners históricos não demonstrados |
 | G. Authority | Autorização humana somente para preparar; autoridade específica futura de execução/aceitação RECOVERY_REQUIRED |
-| H. Contract/invariant | Cadeia existente sensor → state → history → context → anomaly → decision → action → evidence e P01–P15; nenhum contrato Automation Execution reconstruído |
+| H. Contract/invariant | contracts/OBSERVABILITY-LINEAGE.md documenta cadeia contemporânea sensor → state → history → context → anomaly → decision → action → evidence; P01–P15 são somente princípios de governança aplicáveis, não contrato específico de sucessão nem prova de equivalência histórica; nenhum contrato/invariante histórico de Automation Execution & Observability é reconstruído; contrato/invariante histórico exato permanece RECOVERY_REQUIRED |
 | I. SCT | tests/SCT-PREFLIGHT-001.md para revisão documental e M1/M2 pertinentes; não substitui testes de sensores, execução ou runtime |
 | J. Artifact locator | contracts/OBSERVABILITY-LINEAGE.md; não é locator do original histórico |
 | K. Git status | Rastreado no baseline, inalterado; não comprova execução operacional |

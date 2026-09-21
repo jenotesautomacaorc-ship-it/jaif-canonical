@@ -11,7 +11,7 @@ Branch: recovery/hkr-source-disposition-succession-v0.1.
 
 Authority: decisão humana explícita desta execução, limitada à disposição das
 fontes e à preparação documental de sucessão. Source type da autorização:
-instrução humana fornecida na conversa de trabalho, por arquivo anexado.
+instrução humana explícita fornecida na conversa de trabalho.
 Durable locator da autorização: NOT_VERIFIED. Não se atribui autoridade
 empresarial genérica, semantic owner, Role_ID ou identidade pessoal por inferência.
 
@@ -69,7 +69,11 @@ verificação operacional. Evidência da decisão não prova o conteúdo dos ori
 
 ACCEPTED: não concedido. Acceptance: NOT_GRANTED. CURRENT: NOT_GRANTED.
 Esta wave não implementa sucessores, integração, DDL, migration, PostgreSQL, n8n,
-Notion ou runtime; não autoriza publicação, merge, promoção ou closure global.
+Notion ou runtime. A decisão humana de disposição e preparação de sucessão
+registrada neste documento, isoladamente, não autoriza publicação, merge,
+promoção ou closure global. A publicação posterior da branch ocorreu por gate
+e autorização separados; não altera o significado da decisão original nem
+concede acceptance ou autorização de PR ou merge.
 Fechamento M1/M2 e dívida residual permanecem delimitados e preservados.
 
 ## Rastreabilidade e limite do fechamento
@@ -81,7 +85,10 @@ SOURCE/DECISION: instrução humana desta wave; CLAIM: disponibilidade conhecida
 delimitada; EVIDENCE/PROVENANCE: declaração recebida, não originais recuperados;
 INTERPRETATION: disposição de recuperação, não estado; MATERIALITY: bloqueia uso
 de conteúdo histórico ausente; OWNER: binding não demonstrado, RECOVERY_REQUIRED;
-DELTA/TARGET: somente estes dois documentos autorizados; IMPLEMENTATION: escrita
-documental desta decisão, distinta da implementação de sucessores; VERIFICATION:
+DELTA: criação dos dois registros documentais autorizados nesta wave;
+TARGET: os dois artefatos documentais desta mudança no repositório/branch
+controlados; nenhum target operacional é estabelecido por esta decisão;
+IMPLEMENTATION: escrita documental efetivamente realizada, distinta da
+implementação de qualquer sucessor operacional; VERIFICATION:
 revisão documental não verifica objetos operacionais; CLOSURE: global não concedido.
 Nenhum elo requerido ausente é omitido ou convertido em PASS.
