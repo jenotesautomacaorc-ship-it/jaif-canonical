@@ -1,56 +1,71 @@
-# JAIF — CHANGE OWNER-SPECIFIC CONTRACT — CONTEMPORARY FIRST FORMALIZATION — PROPOSAL v0.1
+# JAIF — CHANGE OWNER-SPECIFIC CONTRACT — CONTEMPORARY HARDENING REVISION — PROPOSAL v0.2
 
-**Frozen baseline:** `main@3a38a354bcbb1440da5c749c757fc5b91da0bc7e`
+**Frozen baseline:** `main@34ee5c49a84fa71473ac1059c9468f8ff2304aae`
 **Git locator:** `contracts/CHANGE.md`
-**Proposed version:** `0.1.0-CONTEMPORARY-PROPOSED`
+**Proposed version:** `0.2.0-CONTEMPORARY-PROPOSED`
 **Status:** PROPOSED — NON-CANONICAL — NON-ACCEPTED — NON-CURRENT
 **Canonical ID:** NOT_ASSIGNED
-**Historical relation:** FIRST_FORMALIZATION_CONTEMPORARY; NO HISTORICAL PREDECESSOR/SUCCESSOR CLAIM
+**Contemporary relation:** REVISION_OF_G1_M0_PROPOSED_FIRST_FORMALIZATION; NO HISTORICAL PREDECESSOR/SUCCESSOR CLAIM
 **DDL / PostgreSQL / runtime:** NOT APPLICABLE TO THIS DOCUMENTAL FORMALIZATION
 
 ## 1. Provenance and basis
 
-This is a proposed contemporary first owner-specific formalization. It is derived from recovered owner-key/scope evidence, current repository governance, the bounded Phase10 routing corpus and G1/G1-G working decisions. It is not a reconstruction of an unavailable historical owner-specific contract.
+This is a proposed contemporary hardening revision of the G1-M0 first formalization of the `CHANGE` semantic owner. It carries forward the G1-M0 owner boundary and adds only the G1-M1 change-control hardening residuals that G1-M0 explicitly left open.
 
-Controlled references for this proposed formalization:
-- [Target-binding evidence](../evidence/G1-M0-TARGET-BINDING-EVIDENCE.md)
-- [Owner-boundary tests](../tests/G1-M0-OWNER-BOUNDARY-TESTS.md)
+Controlled references for this proposed revision:
+- [G1-M1 change-control hardening evidence](../evidence/G1-M1-CHANGE-CONTROL-HARDENING-EVIDENCE.md)
+- [G1-M1 change hardening tests](../tests/G1-M1-CHANGE-HARDENING-TESTS.md)
+- [G1-M0 target-binding evidence](../evidence/G1-M0-TARGET-BINDING-EVIDENCE.md)
+- [G1-M0 owner-boundary tests](../tests/G1-M0-OWNER-BOUNDARY-TESTS.md)
 - [Canonical governance](../governance/CANONICAL-GOVERNANCE.md)
 - [HKR non-omission gate](../governance/HKR-NON-OMISSION-GATE.md)
 - [Change control](../governance/CHANGE-CONTROL.md)
 
-Recovered/supporting statements:
-- Recovered LCM owner evidence states CHANGE owns controlled change.
-- Current CHANGE-CONTROL requires branch→change→evidence→tests→diff→review→PR→merge and requires origin, owner, identity and destination.
-- Current change governance requires prior/proposed meaning comparison, materiality, impacts, sources, conflicts, owner and decision.
+G1-M0 established that `CHANGE` owns controlled-change semantics and explicitly deferred to G1-M1:
+- Minimum Necessary Change;
+- downstream dependency coverage;
+- blast-radius treatment;
+- rollback/reversibility treatment;
+- fail-closed behavior when material impact or reversibility remains unknown.
 
-Phase10 routing evidence: **8 primary claims** and **19 consumer references** involve `CHANGE`.
-Primary claim IDs: W10D-CLM-026, W10D-CLM-027, W10D-CLM-028, W10D-CLM-029, W10D-CLM-036, W10D-CLM-041, W10D-CLM-042, W10D-CLM-168
-Post-cutoff G1 bundles routed here: G1-WB-001, G1-WB-002, G1-WB-003, G1-WB-004, G1-WB-007, G1-WB-008, G1-WB-009, G1-WB-010, G1-WB-011, G1-WB-012, G1-WB-014, G1-WB-015, G1-WB-016, G1-WB-017, G1-WB-023, G1-WB-024, G1-WB-028
+This revision is not a recovered historical contract and does not claim historical continuity that has not been proven.
 
 ## 2. Proposed semantic subject owned
 
-- Controlled change identity and bounded delta against an identified baseline.
-- Target reference, scope, semantic-change classification, materiality/impact references and supersession/version linkage for the change subject.
-- Change-set representation and links to decision, implementation and verification records without owning those external semantics.
+`CHANGE` owns:
+- controlled change identity and bounded delta against an identified baseline;
+- target reference, scope, semantic-change classification, materiality/impact references and supersession/version linkage for the change subject;
+- the constraint that a proposed change set contains no more change than is necessary to satisfy the declared objective and its demonstrated necessary dependencies;
+- impact/dependency coverage needed to bound the change set;
+- blast-radius representation for the change subject;
+- rollback/reversal/irreversibility representation for the change subject;
+- links to decision, implementation, evidence and verification records without taking ownership of those external semantics.
 
 ## 3. Explicit non-ownership boundaries
 
-- Authority to approve/execute/accept (AUTH / competent human).
-- Evidence/provenance object semantics (EVID).
-- Quality/test criteria (QUALITY).
-- Process semantics outside the controlled-change subject (PROCESS).
-- Underlying domain fact being changed.
+`CHANGE` does not own:
+- authority to approve, execute, waive, accept or promote (`AUTH` / competent human authority);
+- evidence/provenance object semantics (`EVID`);
+- quality, test, inspection, commissioning or acceptance criteria (`QUALITY`);
+- process sequencing outside the controlled-change subject (`PROCESS`);
+- the underlying technical/domain fact being changed;
+- role/capability identity;
+- secrets/credentials;
+- a new umbrella owner, engine, lifecycle or source of truth.
+
+Consumed contract != shared ownership.
 
 ## 4. Consumed contracts / referenced owners
 
-Consumed contract != shared ownership.
 - `AUTH`
 - `EVID`
 - `QUALITY`
 - `PROCESS`
 - `DOCUMENT/VIEW`
-- `applicable domain/TECH owners`
+- applicable domain/TECH owners
+- applicable consumer/dependency owners
+
+A dependency or consumer reference does not transfer semantic ownership to `CHANGE`.
 
 ## 5. Proposed invariants
 
@@ -60,25 +75,125 @@ Consumed contract != shared ownership.
 - Change document/diff != authority.
 - Stale-base change cannot be applied as if current without reconciliation.
 - Change must preserve semantic traceability and explicit target identity.
+- Small diff != low materiality.
+- Documentation-only != semantically immaterial automatically.
+- Newer version != ACCEPTED/CURRENT.
+- A rollback plan != verified rollback capability.
+- Reversibility != authorization.
+- Unknown material dependency, impact or reversibility fails closed.
 
-## 6. Authority boundary
+## 6. Minimum Necessary Change
 
-`CHANGE` semantic ownership does not identify or grant the competent human authority required for ACCEPTED/CURRENT. Authority for future acceptance must be explicitly recorded and remains separate from semantic ownership.
+A change set must be no larger than necessary to satisfy:
+1. the explicitly declared change objective; and
+2. dependencies demonstrated as necessary to achieve that objective safely and coherently.
 
-## 7. Identity / version boundary
+Each material changed path/subject must be attributable to the objective or to a documented necessary dependency.
 
-`contracts/CHANGE.md` is the physical Git locator of this proposed first formalization, not a canonical ID. Version `0.1.0-CONTEMPORARY-PROPOSED` is a proposal version. Neither establishes CANONICAL, ACCEPTED or CURRENT.
+Unrelated cleanup, opportunistic refactoring, convenience edits, taxonomy changes or adjacent feature work are outside the change unless separately justified and authorized.
 
-## 8. Verification boundary
+If an unrelated delta can be separated without defeating the authorized objective, it must be split into a separate change.
 
-The proposal must pass G1-M0 boundary/adversarial tests and diff review. Passing those tests verifies only the documentary/semantic scope being tested; it does not verify operational implementation.
+`Minimum Necessary Change` is a constraint on change scope. It does not authorize execution and does not replace materiality review.
 
-## 9. Open items / fail-closed conditions
+## 7. Dependency coverage and impact boundary
 
-- G1-M1 will decide/add Minimum Necessary Change and the true-delta residuals for downstream dependency coverage, blast radius and rollback/reversibility; G1-M0 does not pre-accept them into this contract.
-- Any material conflict with a narrower owner-specific contract discovered later blocks promotion until reconciled.
-- No new registry/schema/DDL/owner/domain/engine/lifecycle may be inferred from this proposal.
+For a material change, the change record must identify, to the extent applicable:
+- direct dependencies required by the target;
+- known downstream consumers materially affected by the delta;
+- owner/contract boundaries crossed by the change;
+- artifacts or operational surfaces whose meaning or behavior may change;
+- known conflicts, stale assumptions and unresolved dependency questions.
 
-## 10. Promotion conditions
+Absence of a known dependency is not proof that no dependency exists.
 
-Before ACCEPTED/CURRENT can ever be considered: source/provenance, semantic owner subject, competent authority, target identity/version, delta, review, applicable verification evidence and supersession/currentness treatment must be explicit under existing governance.
+If a material dependency or consumer relationship is reasonably expected but cannot be determined with sufficient evidence, dependent implementation or promotion remains blocked.
+
+Dependency coverage is evidence-bounded and must not be represented as globally complete unless the reviewed universe and search/reconciliation method justify that claim.
+
+## 8. Blast radius
+
+A material change must state its bounded blast radius: what is intended to change, what may be affected, and what is explicitly outside scope.
+
+Blast radius is an impact representation of the change subject. It is not a new owner, domain, engine, registry or lifecycle.
+
+A narrow file diff does not by itself prove a narrow semantic or operational blast radius.
+
+Where impact crosses owner boundaries, the applicable owners remain authoritative for their own semantic subjects.
+
+## 9. Rollback, reversibility and irreversibility
+
+For a material change, reversibility must be explicitly classified as one of:
+- reversible with a defined rollback/reversal path;
+- intentionally irreversible with explicit rationale, competent authority and mitigation/containment;
+- not applicable, with justification;
+- NOT_VERIFIED / unknown, which blocks dependent implementation or promotion when reversibility is material.
+
+Where rollback is applicable, the change record must identify:
+- the rollback/reversal target or prior state;
+- preconditions and dependencies needed for rollback;
+- material data/state loss or compatibility consequences;
+- evidence that the rollback method is technically plausible;
+- verification status of the rollback method.
+
+A documented rollback plan is not proof that rollback will work.
+
+An untested or unverified rollback path must remain `NOT_VERIFIED`.
+
+## 10. Fail-closed conditions
+
+The change remains blocked from dependent implementation/promotion when any of the following is material and unresolved:
+- objective or target identity is ambiguous;
+- baseline is stale or uncertain;
+- unexplained delta exists;
+- required dependency coverage is materially incomplete;
+- blast radius cannot be bounded sufficiently;
+- reversibility/irreversibility is materially unknown;
+- rollback requirements are applicable but not defined;
+- owner/authority conflict remains unresolved;
+- evidence needed for the intended claim is missing.
+
+Fail-closed treatment is a control response, not a new governance state.
+
+## 11. Authority boundary
+
+`CHANGE` semantic ownership does not grant competent human authority.
+
+The authority to approve scope, accept irreversibility, authorize implementation, waive a control, promote `ACCEPTED` or designate `CURRENT` remains separate and must be explicitly recorded under `AUTH` and applicable governance.
+
+## 12. Identity / version boundary
+
+`contracts/CHANGE.md` is the physical Git locator of this proposed revision, not a canonical ID.
+
+Version `0.2.0-CONTEMPORARY-PROPOSED` identifies this proposal revision only.
+
+It does not establish CANONICAL, ACCEPTED, CURRENT, implemented runtime state or historical succession.
+
+## 13. Verification boundary
+
+The proposal must pass G1-M1 change-hardening tests and complete diff review against the exact baseline/head under review.
+
+Passing those documentary/semantic tests verifies only the tested proposal scope.
+
+It does not prove:
+- production/runtime implementation;
+- operational behavior;
+- physical commissioning;
+- rollback execution in a real target;
+- acceptance;
+- CURRENT designation.
+
+## 14. Open items / later-wave boundary
+
+G1-M1 does not create a machine-readable change schema, new registry, new owner, new engine, new lifecycle or PostgreSQL/DDL target.
+
+If later implementation requires machine-readable fields, workflow automation, execution-path enforcement or runtime observability, those are separately authorized deltas and must reuse these semantics rather than duplicate them.
+
+Any material conflict with a narrower owner-specific contract discovered later blocks promotion until reconciled.
+
+## 15. Promotion conditions
+
+Before ACCEPTED/CURRENT can ever be considered, the applicable chain must make explicit:
+source/provenance, owner subject, competent authority, exact target identity/version, baseline, minimum necessary delta, materiality, dependency/impact coverage, blast radius, reversibility treatment, decision, implementation evidence, verification evidence and supersession/currentness treatment.
+
+No step is automatic.
